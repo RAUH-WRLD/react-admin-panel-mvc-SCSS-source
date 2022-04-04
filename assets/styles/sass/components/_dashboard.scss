@@ -1,0 +1,240 @@
+//navigation
+.dashboard__panel_navigation {
+    .panel__navigation_item:first-child {
+        background: $snow;
+        a {
+            pointer-events: none;
+            user-select: none;
+            svg {
+                fill: $grey-new !important;
+                .st12 {
+                    fill: $grey-new !important;
+                }
+            }
+        }
+    }
+}
+//main
+.dashboard__main {
+    position: relative;
+    font-family: "Rubik", sans-serif;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.dashboard__main_info {
+    padding-top: 16px;
+    display: flex;
+    justify-content: center;
+    .grid-x {
+        width: 100%;
+        .cell:first-child {
+            display: flex;
+            justify-content: flex-start;
+        }
+        .cell:nth-child(2) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+.dashboard__main_statistics {
+    margin-top: 85px;
+    padding-bottom: 25px;
+}
+.dashboard__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard__card_item {
+    text-align: center;
+}
+.dashboard__card {
+    width: 189px;
+    min-height: 124px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 1px solid $snow-a;
+}
+.dashboard__card:nth-child(2),
+.dashboard__card:nth-child(3) {
+    .dashboard__card_info {
+        .dashboard__card_info_inner::first-letter {
+            margin-right: 5px;
+            font-size: 12px;
+            line-height: 22px;
+            font-weight: 500;
+        }
+    }
+}
+.dashboard__card:last-child {
+    border-right: none;
+}
+.dashboard__info {
+    padding-top: 44px;
+}
+.dashboard__card_info_inner {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $light-dark;
+}
+.dashboard__card_name_inner {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $light-purp-new;
+}
+.dashboard__card_info_status {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $blue;
+    svg {
+        margin-left: 10px;
+    }
+}
+.dashboard__clock_title_inner {
+    font-size: 11px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $grey-new-b;
+}
+.dashboard__clock_subtitle_inner {
+    font-size: 24px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $light-dark;
+}
+.dashboard__clock_subtitle {
+    margin-top: 34px;
+}
+.dashboard__clock_item_button {
+    @extend .panel__navigation_item;
+    background: $snow;
+    svg {
+        fill: $grey-new;
+    }
+    &:disabled {
+        pointer-events: none;
+        user-select: none;
+        svg {
+            fill: $gtr-blue;
+        }
+    }
+}
+.dashboard__clock_item {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+.dashboard__clock_item_date {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $grey;
+}
+.dashboard__statistics {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.dashboard__statistics_graph_label_color {
+    width: 8px;
+    height: 3px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+.dashboard__statistics_graph_label_option {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $light-purp !important;
+}
+.recharts-cartesian-axis-tick-value tspan {
+    @extend .dashboard__statistics_graph_label_option;
+}
+.recharts-cartesian-axis-tick-value {
+    fill: $light-purp !important;
+}
+.recharts-tooltip-label {
+    @extend .dashboard__statistics_graph_label_option;
+}
+.recharts-tooltip-cursor {
+    fill: $relentlessly_red;
+}
+.recharts-legend-item-text {
+    @extend .dashboard__statistics_graph_label_option;
+}
+.recharts-default-legend {
+    text-align: left !important;
+    margin-top: 17px !important;
+    margin-left: 60px !important;
+}
+.dashboard__statistics_graph,
+.dashboard__statistics_bars {
+    max-width: 540px;
+}
+.dashboard__statistics_graph_options {
+    display: flex;
+    max-width: 340px;
+    flex-wrap: wrap;
+    margin-top: 17px;
+    margin-left: 60px;
+}
+.dashboard__statistics_graph_option {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.dashboard__statistics_graph_label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 3px;
+        left: -14px;
+        right: 0;
+        bottom: 0;
+        border: 1px solid $pool-grey;
+        border-radius: 2.5px;
+    }
+}
+.dashboard__statistics_graph_checkbox {
+    position: relative;
+    opacity: 0;
+    &:checked + label::before {
+        background: url("../../../images/icons/checkmark.svg") no-repeat center center;
+    }
+}
+.dashboard__statistics_graph_title,
+.dashboard__statistics_bars_title {
+    h3 {
+        color: $light-dark;
+        font-size: 13px;
+        line-height: 22px;
+        font-weight: 500;
+        margin-left: 25px;
+        margin-bottom: 30px;
+    }
+}
+.dashboard__statistics_resources {
+    .recharts-tooltip-item-value {
+        &:after {
+            content: "%";
+            display: inline-block;
+        }
+    }
+}
+.dashboard__main_clock {
+    top: 132px;
+    left: 100px;
+}

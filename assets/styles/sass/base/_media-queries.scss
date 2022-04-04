@@ -1,0 +1,162 @@
+@media screen and (max-width: 1030px) {
+    .auth__main {
+        height: auto;
+        align-items: stretch;
+    }
+    .auth__background {
+        height: auto;
+    }
+    .auth__authorization {
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .reset__background {
+        display: none;
+    }
+    .auth__reset_authorization {
+        position: static;
+    }
+}
+@media screen and (max-height: 740px) {
+    .reset__background {
+        display: none;
+    }
+    .auth__reset_authorization {
+        position: static;
+    }
+}
+@media screen and (max-height: 580px) {
+    .auth__main {
+        height: auto;
+        align-items: stretch;
+    }
+    .auth__background {
+        height: auto;
+    }
+    .auth__authorization {
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 880px) {
+    .auth__authorization_reset_button {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .auth__authorization_reset_button {
+        margin: 0;
+        margin-top: 15px;
+        margin-left: 6px;
+    }
+    .auth__authorization_buttons {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+@media screen and (max-width: 1023.9px) {
+    .panel {
+        .cell:nth-child(2) {
+            justify-content: flex-end !important;
+        }
+        .cell:last-child {
+            justify-content: flex-start !important;
+        }
+    }
+    .panel__user_controls {
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 1108px) {
+    .dashboard__main_info {
+        .grid-x {
+            .cell:first-child,
+            .cell:nth-child(2) {
+                display: block;
+            }
+        }
+    }
+}
+@media screen and (max-width: 639.9px) {
+    .panel {
+        .cell,
+        .cell:nth-child(2),
+        .cell:last-child {
+            justify-content: center !important;
+        }
+    }
+    .panel__navigation_items {
+        margin-top: 20px;
+    }
+    .dashboard__info {
+        flex-wrap: wrap;
+        .dashboard__card {
+            border-right: none;
+        }
+        .dashboard__card:first-child,
+        .dashboard__card:nth-child(2) {
+            border-bottom: 1px solid $snow-a;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+    }
+    .dashboard__clock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .dashboard__main_clock:not(.main__clock_info) {
+        top: 190px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 360px) {
+    .panel__navigation_item {
+        margin-right: 12px;
+    }
+}
+@media screen and (max-width: 457.9px) {
+    .dashboard__info {
+        .dashboard__card {
+            border-bottom: 1px solid $snow-a !important;
+            padding-bottom: 15px !important;
+            margin-bottom: 25px !important;
+        }
+        .dashboard__card:last-child {
+            border-bottom: none !important;
+            padding-bottom: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+}
+@media screen and (max-width: 1720px) {
+    .dashboard__statistics {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 1699.9px) {
+    .dashboard__statistics {
+        justify-content: center;
+    }
+    .dashboard__statistics_resources {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 1159.9px) {
+    .dashboard__statistics_profits {
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width: 599.9px) {
+    .dashboard__statistics_subscriptions,
+    .dashboard__statistics_profits,
+    .dashboard__statistics_resources {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        overflow-x: auto;
+        border-left: 1px solid $light-grey-j;
+        border-right: 1px solid $light-grey-j;
+    }
+}

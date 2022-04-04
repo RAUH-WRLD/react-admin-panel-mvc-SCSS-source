@@ -1,0 +1,166 @@
+.auth__main {
+    font-family: "Rubik", sans-serif;
+    flex-direction: row;
+    height: calc(100vh - 36.8px);
+}
+.auth__background {
+    width: 100%;
+    height: 100%;
+}
+.auth__background_item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.auth__background_inner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.auth__authorization {
+    overflow: hidden;
+    color: $light-dark;
+    width: 100%;
+    max-width: 508px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.auth__authorization_status {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+}
+.auth__authorization_email {
+    @extend .auth__authorization_status;
+    font-size: 13px;
+}
+.auth__authorization_password {
+    @extend .auth__authorization_email;
+}
+.auth__authorization_input {
+    margin-top: 40px;
+    input {
+        border-radius: 10px;
+        margin-top: 10px;
+        padding-left: 10px;
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: 500;
+        color: $grey;
+        border: 1px solid $light;
+        width: calc(100% - 20px);
+    }
+}
+.auth__authorization_item {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 430px;
+}
+.auth__authorization_buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+}
+.auth__authorization_login_button {
+    color: $blue-sky;
+    font-weight: 600;
+    background: $light-blue;
+    width: 100%;
+    max-width: 114px;
+    min-height: 34px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.auth__authorization_login_button:disabled {
+    color: $transpar-blue-sky;
+    background: $transpar-blue;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+}
+.auth__authorization_reset_button {
+    margin-left: 52px;
+    font-size: 12px;
+    line-height: 22px;
+    text-decoration: underline;
+    color: $light-purp;
+    text-decoration-color: $light-grey-j;
+}
+.auth__authorization_sign_button {
+    @extend .auth__authorization_login_button;
+}
+.auth__authorization_account_button {
+    @extend .auth__authorization_reset_button;
+}
+.auth__authorization_form {
+    width: 100%;
+    max-width: 430px;
+}
+.auth__authorization_registration_button {
+    @extend .auth__authorization_reset_button;
+}
+.auth_disabled {
+    @extend .auth__authorization_login_button:disabled;
+}
+.auth__reset_main {
+    position: relative;
+    .auth__authorization_login_button {
+        color: $red-sky;
+        background: $light-red;
+    }
+    .auth__authorization_login_button:disabled {
+        color: $transpar-red-sky;
+        background: $transpar-red;
+    }
+    .auth__authorization_reset_button {
+        margin: 0;
+        margin-top: 15px;
+        margin-left: 6px;
+    }
+    .auth__authorization_buttons {
+        flex-direction: column;
+        align-items: start;
+    }
+    .reset__authorization_reset_button {
+        @extend .auth__authorization_login_button;
+    }
+    .reset__authorization_login_button {
+        @extend .auth__authorization_reset_button;
+    }
+}
+.auth__reset_background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.auth__reset_background_item {
+    width: 100%;
+    height: 100%;
+}
+.auth__reset_background_inner {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.auth__reset_authorization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}

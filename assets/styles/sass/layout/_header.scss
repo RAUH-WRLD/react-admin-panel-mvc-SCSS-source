@@ -1,0 +1,12 @@
+.header {
+    font-family: "Rubik", sans-serif;
+    background: $dark;
+    min-height: 36.8px;
+    display: flex;
+    align-items: center;
+}
+.header__title_inner {
+    color: $light-grey;
+    font-size: 12px;
+    font-weight: 600;
+}

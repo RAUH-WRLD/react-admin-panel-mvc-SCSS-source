@@ -1,0 +1,70 @@
+.main__clock {
+    position: absolute;
+    background: $gtr-blue;
+    width: 200px;
+    height: 100px;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.main__clock_close,
+.main__clock_time {
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    color: $snow;
+    svg {
+        .st7 {
+            fill: $snow !important;
+        }
+    }
+}
+.main__clock_info {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.main__clock_item_inner {
+    --clock-width: 4rem;
+    --clock-radius: calc(var(--clock-width) / 2);
+    --clock-minute-length: calc(var(--clock-width) * 0.4);
+    --clock-hour-length: calc(var(--clock-width) * 0.2);
+    --clock-thickness: 0.2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--clock-width);
+    height: var(--clock-width);
+    border: 3px solid $snow;
+    border-radius: 50%;
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        top: calc(var(--clock-radius) * 0.25);
+        width: var(--clock-thickness);
+        background: $snow;
+        border-radius: 10px;
+        transform-origin: center calc(100% - calc(var(--clock-thickness) / 2));
+        animation: spin infinite linear;
+    }
+    &::before {
+        height: var(--clock-minute-length);
+        animation-duration: 4s; //2
+    }
+    &::after {
+        top: calc(var(--clock-radius) * 0.25 + var(--clock-hour-length));
+        height: var(--clock-hour-length);
+        animation-duration: 30s; //15
+    }
+}
+@keyframes spin {
+    to {
+        transform: rotate(1turn);
+    }
+}

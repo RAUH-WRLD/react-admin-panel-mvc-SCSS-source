@@ -1,0 +1,26 @@
+.unavailable__main {
+    @extend .error-404__main;
+    .unavailable__title_inner {
+        color: $gtr-blue;
+    }
+    &::before,
+    &::after {
+        content: "Unavailable";
+        font-size: 50px;
+    }
+}
+.unavailable__title {
+    @extend .error-404__title;
+}
+.unavailable__info {
+    @extend .error-404__info;
+}
+.unavailable__link {
+    @extend .error-404__link;
+}
+.unavailable__info_inner {
+    @extend .error-404__info_inner;
+}
+.unavailable__link_inner {
+    @extend .error-404__link_inner;
+}

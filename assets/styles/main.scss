@@ -1,0 +1,18 @@
+//base styles
+@import "./sass/utils/_variables.scss";
+@import "./sass/base/_reset.scss";
+@import "./sass/vendors/_foundation.scss";
+@import "./sass/base/_icons.scss";
+//layout
+@import "./sass/layout/_header.scss";
+@import "./sass/layout/_footer.scss";
+//components
+@import "./sass/components/_404.scss";
+@import "./sass/components/_unavailable.scss";
+@import "./sass/components/_auth.scss";
+@import "./sass/components/_panel.scss";
+@import "./sass/components/_clock.scss";
+//pages
+@import "./sass/components/_dashboard.scss";
+//media queries
+@import "./sass/base/_media-queries.scss";
